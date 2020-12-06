@@ -37,7 +37,7 @@ resource "aws_security_group" "otsumami-sg" {
     cidr_blocks       = ["0.0.0.0/0"]
   }
 
-  description = "allow tcp 80"
+  description = "allow only connect for elb"
 
   tags = {
     Name = "${var.project}-sg"
