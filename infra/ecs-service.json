@@ -1,0 +1,14 @@
+{
+    "cluster": "otsumami-dev-cluster",
+    "serviceName": "otsumami-dev-service",
+    "taskDefinition": "otsumami-dev-service",
+    "loadBalancers": [
+        {
+            "targetGroupArn": "arn:aws:elasticloadbalancing:ap-northeast-1:025064445541:targetgroup/otsumami-dev-target-group/3f7dd8e6279c58d7",
+            "containerName": "otsumami-dev-service",
+            "containerPort": 8080
+        }
+    ],
+    "desiredCount": 1,
+    "role": "ecsServiceRole"
+}

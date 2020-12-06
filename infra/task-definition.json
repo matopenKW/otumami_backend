@@ -1,0 +1,21 @@
+{
+    "family": "otsumami-dev-service",
+    "containerDefinitions": [
+        {
+            "name": "otsumami-dev-service",
+            "image": "025064445541.dkr.ecr.ap-northeast-1.amazonaws.com/otsumami-backend:latest",
+            "cpu": 128,
+            "memoryReservation": 128,
+            "portMappings": [
+                {
+                    "containerPort": 8080,
+                    "protocol": "tcp"
+                }
+            ],
+            "command": [
+                "./app/main"
+            ],
+            "essential": true
+        }
+    ]
+}
